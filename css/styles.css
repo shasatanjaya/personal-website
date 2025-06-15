@@ -1,0 +1,558 @@
+/* Base Styles */
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #000;
+    --social-bg: #B6D8B8;
+    --social-text: #126C19;
+    --social-hover: #d6efd6;
+    --divider-color: #ddd;
+    --button-bg: #B6D8B8;
+    --button-text: #126C19;
+    --button-hover: #d6efd6;
+}
+
+@font-face {
+    font-family: 'PPMondwest';
+    src: url('../fonts/PPMondwest-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding-top: 80px;
+    font-size: 3rem;
+    letter-spacing: -0.2rem;
+    color: black;
+}
+
+/* Typography */
+/* h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+} */
+
+
+
+.font-pixels {
+    font-family: 'PPMondwest', sans-serif;
+    font-size: 4.1rem;
+    color: black;
+    /* text-align: center; */
+}
+
+.font-pixels-small {
+    font-family: 'PPMondwest', sans-serif;
+    font-size: 2.3rem;
+    color: black;
+    /* text-align: center; */
+}
+
+.stripe {
+    color: #126C19;
+}
+
+#main-heading {
+    height: 70vh;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    transition: opacity 0.4s ease;
+}
+
+.small-heading {
+    font-size: 1.8rem;
+    text-align: center;
+    letter-spacing: -0.1rem;
+    font-weight: normal;
+}
+
+#lead {
+    min-height: 250vh;
+    position: relative;
+    display: block; 
+}
+
+.wrapper {
+    position: sticky;
+    top: 30vh; /* Position from the top of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin-bottom: 30vh; /* Add space below to create scrolling room */
+    z-index: 10;
+}
+
+.text-container {
+    flex-wrap: wrap;
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+.word .font-pixels,
+.word.active .font-pixels {
+    font-family: 'PPMondwest', sans-serif;
+    font-size: 4.1rem;
+    color: black;
+    opacity: 1;
+}
+
+.word:not(.active) .font-pixels {
+    opacity: 0.95;
+    color: #999;
+}
+
+.word.active .font-pixels {
+    opacity: 1;
+    color: black;
+}
+
+.word {
+    opacity: 0.15;
+    color: #999;
+    transition: all 0.5s ease;
+    display: inline-block;
+    white-space: pre;
+}
+
+.word.active {
+    color: var(--text-color);
+    opacity: 1;
+}
+
+
+
+/* Header/Navbar */
+header {
+    background-color: var(--bg-color);
+    backdrop-filter: blur(8px);
+    transition: transform 0.5s ease, background-color 0.3s ease;
+
+    header.scrolled-up {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+}
+
+header.scrolled-up {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.navbar-brand {
+    font-size: 1.2rem;
+    letter-spacing: -0.08rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.navbar-brand.visible {
+    visibility: visible !important;
+    opacity: 1;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    letter-spacing: -0.08rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #666;
+}
+
+header {
+    transition: transform 0.5s ease, background-color 0.3s ease;
+}
+
+.navbar-brand,
+#main-nav {
+    transition: opacity 0.5s ease;
+}
+
+.navbar-brand.invisible {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* Projects */
+
+.projects-center {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.project-card {
+    height: 95vh;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+}
+
+.project-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-image {
+    flex-grow: 1;
+    border-radius: 0.25rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.project-image img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    display: block;
+
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    font-size: 3rem;
+    font-weight: normal;
+    margin-top: 0.5rem;
+    text-decoration: none;
+}
+
+
+
+
+/* Footer */
+footer {
+    background-color: var(--bg-color);
+    margin-top: 2rem;
+    ;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 0.4rem 1.5rem;
+    background-color: var(--social-bg);
+    color: var(--social-text);
+    border-radius: 9999px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: -0.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--social-hover);
+    color: var(--social-text);
+}
+
+.contact-name {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 0.5rem;
+    letter-spacing: -0.1rem;
+}
+
+#contact {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+/* ============================================ */
+/* REALM OF SHADOW PAGE */
+/* ============================================ */
+
+
+/* Project header */
+.project-header h1 {
+    font-size: 4.1rem;
+    color: black;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.2rem;
+    font-weight: normal;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    letter-spacing: -0.1rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+    height: 52vh;
+}
+
+.year-info {
+    font-size: 1.5rem;
+    letter-spacing: -0.1rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    height: 10vh;
+}
+
+/* Divider */
+.divider {
+    height: 1px;
+    background-color: var(--divider-color);
+    width: 100%;
+    margin: 2rem 0 3rem 0;
+}
+
+/* Machintos Image */
+.computer-image {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.computer-image img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Challenge text */
+.challenge {
+    text-align: center;
+    font-family: 'PPMondwest', sans-serif;
+    font-size: 3.8rem;
+    line-height: 1.2;
+    margin: 5rem 0;
+    letter-spacing: -0.2rem;
+    height: 50vh;
+}
+
+/* Description */
+.description {
+    margin: 3rem 0;
+    max-width: 600px;
+    height: 50vh;
+}
+
+.description p {
+    font-size: 1.3rem;
+    letter-spacing: -0.08rem;
+    line-height: 1.2;
+    margin: 2.5rem 0;
+
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+/* Button */
+.projects-button {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    letter-spacing: -0.1rem;
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--button-text);
+}
+
+.button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Matcha cup
+.matcha-cup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.matcha-cup p {
+    font-size: 1.2rem;
+    letter-spacing: -0.05rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.matcha-cup img {
+    width: 80px;
+} */
+
+/* ============================================ */
+/* CAMPUSEASE PAGE */
+/* ============================================ */
+
+.mockup img {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    display: block;
+}
+
+.figma-logo {
+    width: 5vh;
+}
+
+.view-in-figma {
+    color: var(--button-text);
+}
+
+/* ============================================ */
+/* COSMOSCAPE PAGE */
+/* ============================================ */
+
+.description-cs {
+    margin: 3rem 0;
+    max-width: 600px;
+    height: 30vh;
+}
+
+.description-cs p {
+    font-size: 1.3rem;
+    letter-spacing: -0.08rem;
+    line-height: 1.2;
+    margin: 2.5rem 0;
+
+}
+
+.mockup-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mockup-img {
+    position: absolute;
+    width: 400px;
+}
+
+/* Custom positions for each image */
+.img-1 {
+    top: 1%;
+    right: 1%;
+    width: 40%;
+}
+
+.img-2 {
+    bottom: 20%;
+    left: 1%;
+    width: 40%;
+}
+
+/* Animation Classes */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+    /* Optional: delay to make it feel smoother */
+}
+
+.zoom-out {
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.hero .container {
+    max-width: 1050px;
+}
+
+
+.fade-word {
+    color: #aaa;
+    /* initial grey */
+    position: relative;
+    transition: color 0.6s ease;
+}
+
+.fade-word.in-view {
+    color: #000;
+    /* full black when in view */
+}
+
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .project-header h1 {
+        font-size: 3rem;
+    }
+
+    .subtitle,
+    .year-info {
+        font-size: 1.4rem;
+    }
+
+    .challenge {
+        font-size: 2.5rem;
+    }
+
+    .description p {
+        font-size: 1.5rem;
+    }
+
+    .button {
+        font-size: 1.2rem;
+    }
+
+    .computer-image img {
+        max-width: 100%;
+    }
+}
