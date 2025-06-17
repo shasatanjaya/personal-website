@@ -525,7 +525,28 @@ footer {
 }
 
 
+/* ============================================ */
+/* AR PROJECT PAGE */
+/* ============================================ */
+.description-ar {
+    margin: 3rem 0;
+    max-width: 600px;
+    height: 150vh;
+}
 
+.description-ar p {
+    font-size: 1.3rem;
+    letter-spacing: -0.08rem;
+    line-height: 1.2;
+    margin: 2.5rem 0;
+
+}
+
+.img-ar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 
