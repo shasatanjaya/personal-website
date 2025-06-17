@@ -50,7 +50,7 @@
     loading-screen="enabled: false"
     vr-mode-ui="enabled: false">
 
-    <a-marker type="pattern" url="./Assets/pattern-matcha.patt" id="aogMarker" emitevents="true">
+    <a-marker type="pattern" url="./Assets/pattern-matcha.patt" id="matchaMarker" emitevents="true">
       <!-- <a-image 
         src="Assets/radar.png" 
         position="0.7 0 0" 
@@ -79,7 +79,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const aogMarker = document.querySelector('#aogMarker');
+      const aogMarker = document.querySelector('#matchaMarker');
 
       // Function to adjust image height based on aspect ratio
       function adjustImageAspect(imageElement) {
