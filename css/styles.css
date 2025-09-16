@@ -308,6 +308,22 @@ footer {
     height: 52vh;
 }
 
+.subtitleAssignment {
+    font-size: 1.8rem;
+    letter-spacing: -0.1rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+    height: 20vh;
+}
+
+.year-infoA {
+    font-size: 1.5rem;
+    letter-spacing: -0.1rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    height: 40vh;
+}
+
 .year-info {
     font-size: 1.5rem;
     letter-spacing: -0.1rem;
