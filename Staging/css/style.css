@@ -211,6 +211,10 @@ td, th {
   content: "";
 }
 
+.w-olah-badge{
+  display: none !important;
+}
+
 * {
   box-sizing: border-box;
 }
